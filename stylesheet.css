@@ -13,7 +13,7 @@ body {
 }
 .peach {
 	background-color: #FFDAB9;
-	
+
 }
 .peach-after {
 	-webkit-animation:peach_alive linear 8s infinite;
@@ -1256,6 +1256,13 @@ audio {
 	}
 }
 
+.alldark {
+	background-color: #000;
+	z-index: 100;
+	display: none;
+	height: 100vh;
+}
+
 .balloon-border{
 	position: fixed;
 	top:100%;
@@ -1267,7 +1274,7 @@ audio {
 	bottom: 0;
 	padding:10px 0px 10px 0px;
 }
-#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
+#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story,#done {
 	display: none;
 }
 

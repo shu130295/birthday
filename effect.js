@@ -148,6 +148,26 @@ $('document').ready(function(){
 		});
 	});
 
+	$('#done').click(function(){
+		$('.container').fadeOut('slow');
+		$('.ballooncenter').fadeOut('slow');
+		$('.alldark').fadeIn('slow');
+		interval = setInterval(() =>{
+			var sounds = document.getElementById('hbdsong');
+			var newVolume = sounds.volume - 0.1;
+			// Check if the newVolume is greater than zero
+			if(newVolume >= 0){
+				sounds.volume = newVolume;
+			}
+			else{
+				// Stop fade
+				clearInterval(interval);
+				sounds.volume = 0;
+				sounds.pause();
+				sounds.currentTIme = 0;
+			}
+		}, 200);		
+	});
 		
 	$('#wish_message').click(function(){
 		vw = $(window).width()/2;
@@ -198,6 +218,7 @@ $('document').ready(function(){
 			if(i==52){
 				$("p:nth-child(51)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
+					$('#done').fadeIn('slow');
 				});
 				
 			}
